@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-10-03T13:56:37.553Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="HANCfRGB4AC9gdXucGS9" version="21.5.0" type="device" pages="3">
+<mxfile host="Electron" modified="2023-10-03T13:59:45.049Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.5.0 Chrome/112.0.5615.204 Electron/24.5.1 Safari/537.36" etag="yMgQlAVFJioZQf0AEr2_" version="21.5.0" type="device" pages="3">
   <diagram name="Astrom" id="zrsn4j0DxqHXe83H4rLz">
     <mxGraphModel dx="954" dy="674" grid="0" gridSize="1" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="1" shadow="0">
       <root>
@@ -473,8 +473,8 @@
             <mxPoint x="170" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-3" value="\(\vec{\omega}\cdot \hat{\jmath}\) (spin)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="57" y="304" width="226" height="26" as="geometry" />
+        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-3" value="\(\vec{\omega}\)&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="147" y="310" width="106" height="26" as="geometry" />
         </mxCell>
         <mxCell id="y0TUaUPVkxlrt1iK3nmQ-4" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -502,24 +502,6 @@
         </mxCell>
         <mxCell id="y0TUaUPVkxlrt1iK3nmQ-9" value="\(\hat{\jmath}\)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="325" y="260" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-10" value="" style="endArrow=doubleBlock;html=1;rounded=0;endFill=1;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="340" as="sourcePoint" />
-            <mxPoint x="300" y="312" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-11" value="" style="endArrow=doubleBlock;html=1;rounded=0;endFill=1;" edge="1" parent="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="280" y="340" as="sourcePoint" />
-            <mxPoint x="280" y="219" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-12" value="\(\vec{\omega}\cdot \hat{\imath}\) (roll)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="224" y="316" width="220" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="y0TUaUPVkxlrt1iK3nmQ-13" value="\(\vec{\omega}\cdot \hat{k}\) (yaw)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="201" y="192" width="199" height="26" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
