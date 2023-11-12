@@ -13215,7 +13215,7 @@ L \equiv T - V
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Computation-of-relevant-derivatives">Computation of relevant derivatives<a class="anchor-link" href="#Computation-of-relevant-derivatives">¶</a></h2><p>For each generalized coordinate $\vec{q} = \left[\phi,\delta,\psi\right]^T$, we need to compute the derivatives as per LaGrange's equation above. The bike's kinetic energy is derived in <a href="">this notebook</a>, and the bike's potential energy is derived in <a href="">this notebook</a>. The two are reproduced below for reference.</p>
+<h2 id="Computation-of-relevant-derivatives">Computation of relevant derivatives<a class="anchor-link" href="#Computation-of-relevant-derivatives">¶</a></h2><p>For each generalized coordinate $\vec{q} = \left[\phi,\delta,\psi\right]^T$, we need to compute the derivatives as per LaGrange's equation above. The bike's kinetic energy is derived in <a href="./kinetic_energy.html">this notebook</a>, and the bike's potential energy is derived in <a href="./potential_energy.html">this notebook</a>. The two are reproduced below for reference.</p>
 <p>\begin{equation}
 \begin{aligned}
 T &amp;=&amp; \frac{1}{2}m_r&amp; ( U^2 + a^2\dot{\psi}^2 + h_r^2\dot{\phi}^2 - 2ah_r \dot{\psi}\dot{\phi} )\\
@@ -13231,7 +13231,7 @@ V = m_r g h_r \cos\phi + m_f g \left( \cos\phi \left( b+c - x_f\right)\sin\lambd
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Computing the derivatives of kinetic energy $T$ with respect to velocities $\dot{\vec{q}}$ to find terms for Eqn 2 gives:</p>
+<p>Computing the derivatives of kinetic energy $T$ with respect to velocities $\dot{\vec{q}}$ to find terms for Eqn 2 gives the following. Note that because we will be eliminating the yaw equation of motion, $\dot{\psi}$ terms and associated derivatives in the roll and steer equations have been eliminated using the equation for yaw rate as a function of steer angle and steer rate given at the end of the <a href="./turning_kinematics.html">turning kinematics notebook</a>.</p>
 <p>\begin{equation}
 \begin{aligned}
 \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\phi}} \right) &amp;=&amp; \ddot{\phi}&amp; \left( m_rh_r^2 + m_fh_f^2 \right) \\
