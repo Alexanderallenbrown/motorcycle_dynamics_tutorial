@@ -13231,7 +13231,15 @@ V = m_r g h_r \cos\phi + m_f g \left( \cos\phi \left( b+c - x_f\right)\sin\lambd
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Computing the derivatives of kinetic energy $T$ with respect to velocities $\dot{\vec{q}}$ to find terms for Eqn 2 gives the following. Note that because we will be eliminating the yaw equation of motion, $\dot{\psi}$ terms and associated derivatives in the roll and steer equations have been eliminated using the equation for yaw rate as a function of steer angle and steer rate given at the end of the <a href="./turning_kinematics.html">turning kinematics notebook</a>.</p>
+<p>Computing the derivatives of kinetic energy $T$ with respect to velocities $\dot{\vec{q}}$ to find terms for Eqn 2 gives the following. Starting with the roll direction:</p>
+<p>\begin{equation*}
+\begin{aligned}
+\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\phi}} \right) &amp;=&amp; \ddot{\phi}&amp; \left( m_rh_r^2 + m_fh_f^2 \right) \\
+&amp;+&amp; \ddot{\delta}&amp;\left(-m_fh_fu\right) \\
+&amp;+&amp; \ddot{\psi}&amp;\left( -m_rah_r-m_fx_fh_f\right) 
+\end{aligned}
+\end{equation*}</p>
+<p>Using the kinematic relationship between yaw rate and steer, $\dot{\psi} = \frac{U\sin\lambda}{b}\delta + \frac{c\sin \lambda}{b}\dot{\delta}$, which we derive in the <a href="./turning_kinematics.html">turning kinematics</a> notebook, we can eliminate yaw rate and yaw acceleration from this equation in anticipation of the <a href="#Eliminating-Yaw">"Eliminating Yaw"</a> section. Substituting, we can write:</p>
 <p>\begin{equation}
 \begin{aligned}
 \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\phi}} \right) &amp;=&amp; \ddot{\phi}&amp; \left( m_rh_r^2 + m_fh_f^2 \right) \\
@@ -13245,6 +13253,15 @@ V = m_r g h_r \cos\phi + m_f g \left( \cos\phi \left( b+c - x_f\right)\sin\lambd
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Computing the same partial derivative in the steer direction, we obtain:</p>
+<p>\begin{equation*}
+\begin{aligned}
+\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\delta}} \right) &amp;=&amp; \ddot{\phi}&amp; \left( -m_f u h_f \right) \\
+&amp;+&amp; \ddot{\delta} &amp;\left( m_fu^2 \right) \\
+&amp;+&amp; \ddot{\psi} &amp;\left(m_f x_f u \right)
+\end{aligned}
+\end{equation*}</p>
+<p>Using the kinematic relationship between yaw rate and steer, $\dot{\psi} = \frac{U\sin\lambda}{b}\delta + \frac{c\sin \lambda}{b}\dot{\delta}$, which we derive in the <a href="./turning_kinematics.html">turning kinematics</a> notebook, we can eliminate yaw rate and yaw acceleration from this equation in anticipation of the <a href="#Eliminating-Yaw">"Eliminating Yaw"</a> section. Substituting, we can write:</p>
 <p>\begin{equation}
 \begin{aligned}
 \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\delta}} \right) &amp;=&amp; \ddot{\phi}&amp; \left( -m_f u h_f \right) \\
@@ -13258,6 +13275,15 @@ V = m_r g h_r \cos\phi + m_f g \left( \cos\phi \left( b+c - x_f\right)\sin\lambd
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Computing the same derivative for the yaw direction, we can write:</p>
+<p>\begin{equation*}
+\begin{aligned}
+\frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\psi}} \right) &amp;=&amp; \ddot{\phi}&amp; \left(-m_rah_r-m_fx_fh_f\right) \\
+&amp;+&amp; \ddot{\delta}&amp; \left(m_fx_f u \right)\\
+&amp;+&amp; \ddot{\psi}&amp; \left(m_ra^2 + m_fx_f^2 \right)
+\end{aligned}
+\end{equation*}</p>
+<p>Using the kinematic relationship between yaw rate and steer, $\dot{\psi} = \frac{U\sin\lambda}{b}\delta + \frac{c\sin \lambda}{b}\dot{\delta}$, which we derive in the <a href="./turning_kinematics.html">turning kinematics</a> notebook, we can eliminate yaw rate and yaw acceleration from this equation in anticipation of the <a href="#Eliminating-Yaw">"Eliminating Yaw"</a> section. Substituting, we can write:</p>
 <p>\begin{equation}
 \begin{aligned}
 \frac{d}{dt} \left( \frac{\partial T}{\partial \dot{\psi}} \right) &amp;=&amp; \ddot{\phi}&amp; \left(-m_rah_r-m_fx_fh_f\right) \\
@@ -13510,7 +13536,7 @@ V = m_r g h_r \cos\phi + m_f g \left( \cos\phi \left( b+c - x_f\right)\sin\lambd
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Eliminating-Yaw">Eliminating Yaw<a class="anchor-link" href="#Eliminating-Yaw">¶</a></h2><p>Because steering and yaw are directly coupled through the equation $\dot{\psi} = \frac{U\sin\lambda}{b}\delta + \frac{c\sin \lambda}{b}\dot{\delta}$ (See <a href="">this notebook</a> for derivation), the steer and yaw directions are not energetically independent. They are, however, coupled through the constraint that the tires roll without slip on the road surface. This means that the tire forces are "constraint forces" in the "non-holonomic" (in terms of velocity only) roll-without-slip constraints. In the language of LaGrangian mechanics, we have an "ignorable coordinate." Rather than implying that the coordinate is not important, this means that one of the two coupled, non-independent generalized coordinates (yaw, in our case) can be eliminated algebraically.</p>
+<h2 id="Eliminating-Yaw">Eliminating Yaw<a class="anchor-link" href="#Eliminating-Yaw">¶</a></h2><p>Because steering and yaw are directly coupled through the equation $\dot{\psi} = \frac{U\sin\lambda}{b}\delta + \frac{c\sin \lambda}{b}\dot{\delta}$ (See <a href="./turning_kinematics.html">this notebook</a> for derivation), the steer and yaw directions are not energetically independent. They are, however, coupled through the constraint that the tires roll without slip on the road surface. This means that the tire forces are "constraint forces" in the "non-holonomic" (in terms of velocity only) roll-without-slip constraints. In the language of LaGrangian mechanics, we have an "ignorable coordinate." Rather than implying that the coordinate is not important, this means that one of the two coupled, non-independent generalized coordinates (yaw, in our case) can be eliminated algebraically.</p>
 <p>As we can see in Eqns 23 and 24, the unknown front tire lateral force $F_f$ appears in both, and is not multiplied by any of our generalized coordinates or their derivatives. The strategy will be to solve Eqn 24 for $F_f$ and substitute it into Eqn 24 to eliminate the need for Eqn 24 altogether. Solving Eqn 24 for $F_f$ yields:</p>
 <p>\begin{equation}
 \begin{aligned}
