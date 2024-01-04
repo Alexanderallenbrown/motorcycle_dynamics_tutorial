@@ -13151,7 +13151,7 @@ div#notebook {
 </ul>
 <h3 id="Torques">Torques<a class="anchor-link" href="#Torques">¶</a></h3><ul>
 <li>$T_{in,\phi}$ is the total applied rider or disturbance torque about the roll ($\hat{\imath}$) axis.</li>
-<li>$T_{in,\delta}$ is the total applied rider or disturbance torque about the roll ($\hat{\imath}$) axis.</li>
+<li>$T_{in,\delta}$ is the total applied rider or disturbance torque about the steer ($\hat{e}_\lambda$) axis.</li>
 </ul>
 </div>
 </div>
@@ -13660,7 +13660,7 @@ M\vec{\ddot{q}} + D \vec{\dot{q}} + K \vec{q} = \vec{F}\vec{u}
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In our case, after eliminating $\psi$, we have $\vec{q} = \left[\phi,\delta \right]^T$. Because we have already collected terms in both the roll and steer equations of motion, we can express the model compactly as:</p>
 <p>\begin{equation}
-\begin{bmatrix}M11 &amp; M12 \\M21 &amp; M22 \end{bmatrix}\begin{bmatrix}\ddot{\phi} \\ \ddot{\delta} \end{bmatrix} + \begin{bmatrix}D11 &amp; D12 \\D21 &amp; D22 \end{bmatrix}\begin{bmatrix}\dot{\phi} \\ \dot{\delta} \end{bmatrix} + \begin{bmatrix}K11 &amp; K12 \\K21 &amp; K22 \end{bmatrix}\begin{bmatrix}{\phi} \\ {\delta} \end{bmatrix} = \begin{bmatrix}T_{in,\psi} \\ T_{in, \delta}\end{bmatrix}
+\begin{bmatrix}M11 &amp; M12 \\M21 &amp; M22 \end{bmatrix}\begin{bmatrix}\ddot{\phi} \\ \ddot{\delta} \end{bmatrix} + \begin{bmatrix}D11 &amp; D12 \\D21 &amp; D22 \end{bmatrix}\begin{bmatrix}\dot{\phi} \\ \dot{\delta} \end{bmatrix} + \begin{bmatrix}K11 &amp; K12 \\K21 &amp; K22 \end{bmatrix}\begin{bmatrix}{\phi} \\ {\delta} \end{bmatrix} = \begin{bmatrix}T_{in,\phi} \\ T_{in, \delta}\end{bmatrix}
 \end{equation}</p>
 </div>
 </div>
